@@ -1,4 +1,0 @@
-sceneSetups:
-- path: Assets/ojala si.unity
-  isLoaded: 1
-  isActive: 1
