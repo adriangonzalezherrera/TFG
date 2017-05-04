@@ -146,8 +146,11 @@ public class OVRPlayerController : MonoBehaviour
 
 	void Update()
 	{
-		//Use keys to ratchet rotation
-		if (Input.GetKeyDown(KeyCode.Q))
+        //Use keys to ratchet rotation
+        if (Input.GetKeyUp(KeyCode.Space))
+            Jump();
+
+        if (Input.GetKeyDown(KeyCode.Q))
 			buttonRotation -= RotationRatchet;
 
 		if (Input.GetKeyDown(KeyCode.E))
@@ -259,10 +262,10 @@ public class OVRPlayerController : MonoBehaviour
 			 (moveBack && moveLeft)    || (moveBack && moveRight) )
 			MoveScale = 0.70710678f;
 
-		// No positional movement if we are in the air
-		if (!Controller.isGrounded)
+		// No positional movement if we are in the air Lo que me has costado...
+		/*if (!Controller.isGrounded)
 			MoveScale = 0.0f;
-
+*/
 		MoveScale *= SimulationRate * Time.deltaTime;
 
 		// Compute this for key movement
