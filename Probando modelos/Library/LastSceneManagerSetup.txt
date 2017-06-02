@@ -1,0 +1,4 @@
+sceneSetups:
+- path: Assets/Puzzle2_sencillo.unity
+  isLoaded: 1
+  isActive: 1
